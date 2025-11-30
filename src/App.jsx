@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <>
-      <button onClick={clickHandler} style={{ display: showBtn, position: "fixed", top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}> Click This Button</button>
+      <button onClick={clickHandler} style={{ display: showBtn, position: "fixed", top: '50%', left: '50%', transform: 'translate(-50%, -50%)', padding: '.5rem 1rem' }}> Click This Button</button>
       {show && <>
 
         {
