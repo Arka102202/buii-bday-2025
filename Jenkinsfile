@@ -104,8 +104,6 @@ pipeline {
     }
 
     stage('Deploy to EC2') {
-      // If your job is multibranch, BRANCH_NAME exists.
-      // The condition below deploys only when building DEPLOY_BRANCH.
       when {
         anyOf {
           expression { return env.BRANCH_NAME ? (env.BRANCH_NAME == env.DEPLOY_BRANCH) : true }
@@ -118,7 +116,9 @@ pipeline {
           sh '''
             set -eux
             echo "Uploading artifact via rsync…"
-            rsync -avz --delete artifact/ ${EC2_USER}@${EC2_HOST}:${REMOTE_WEB_ROOT}/
+            
+            # UPDATED COMMAND BELOW: Added -e "ssh -o StrictHostKeyChecking=no"
+            rsync -avz -e "ssh -o StrictHostKeyChecking=no" --delete artifact/ ${EC2_USER}@${EC2_HOST}:${REMOTE_WEB_ROOT}/
 
             echo "Reloading Nginx…"
             ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} 'sudo nginx -t && sudo systemctl reload nginx'
