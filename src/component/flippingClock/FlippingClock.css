@@ -1,0 +1,44 @@
+/************************
+    animation part
+ ************************/
+
+.top_flip_anim,
+.top_flip_anim-1 {
+  animation: flip-down-top var(--timer-time) ease-in forwards;
+  transform-origin: bottom;
+}
+
+@keyframes flip-down-top {
+  100% {
+    transform: perspective(var(--perspective-value)) rotateX(-90deg);
+  }
+}
+
+.bottom_flip {
+  transform: perspective(30rem) rotateX(90deg);
+}
+
+.bottom_flip_anim,
+.bottom_flip_anim-1 {
+  animation: flip-down-bottom var(--timer-time) ease-out forwards;
+  transform-origin: top;
+  animation-delay: var(--delay-flip);
+}
+
+
+@keyframes flip-down-bottom {
+  100% {
+    transform: perspective(var(--perspective-value)) rotateX(0deg);
+  }
+}
+
+.shadow_anim {
+  animation: shadow-bottom var(--timer-time) ease-in;
+}
+
+@keyframes shadow-bottom {
+  100% {
+    opacity: 0.8;
+    height: 6rem;
+  }
+}

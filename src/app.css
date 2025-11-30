@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'hp-font'; /* Define a name for your font */
+    src: url('./assets/fonts/HARRYP__.TTF') format('truetype'); /* Specify the path to the .ttf file */
+    font-weight: normal; /* Optional: Specify the font weight */
+    font-style: normal;  /* Optional: Specify the font style */
+  }
+
+@font-face {
+    font-family: 'grotesis'; /* Define a name for your font */
+    src: url('./assets/fonts/grotesis.otf') format('opentype'); /* Specify the path to the .ttf file */
+    font-weight: normal; /* Optional: Specify the font weight */
+    font-style: normal;  /* Optional: Specify the font style */
+  }
+@font-face {
+    font-family: 'classy-voguish'; /* Define a name for your font */
+    src: url('./assets/fonts/classy-voguish.otf') format('opentype'); /* Specify the path to the .ttf file */
+    font-weight: normal; /* Optional: Specify the font weight */
+    font-style: normal;  /* Optional: Specify the font style */
+  }
+@font-face {
+    font-family: 'kosfia'; /* Define a name for your font */
+    src: url('./assets/fonts/kosfia.otf') format('opentype'); /* Specify the path to the .ttf file */
+    font-weight: normal; /* Optional: Specify the font weight */
+    font-style: normal;  /* Optional: Specify the font style */
+  }
+@font-face {
+    font-family: 'Boniface'; /* Define a name for your font */
+    src: url('./assets/fonts/Boniface.otf') format('opentype'); /* Specify the path to the .ttf file */
+    font-weight: normal; /* Optional: Specify the font weight */
+    font-style: normal;  /* Optional: Specify the font style */
+  }
+
+:root {
+    --timer-time: .5s;
+    --delay-flip: .5s;
+    --perspective-value: 25rem;
+    --body-background-color: rgb(255, 255, 255);
+    --text-color: #eee;
+    --top--bg-color: #282828;
+    --top-shadow-color: #232323;
+    --bottom-bg-color: #2d2d2d;
+}
+
+body{
+  background-color: black;
+}
